@@ -1,0 +1,7 @@
+# .gitignore for 'PluginScaffolding'
+
+# project folders, compile outputs
+.build/
+
+
+# 
