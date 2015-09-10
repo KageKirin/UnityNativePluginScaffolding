@@ -1,5 +1,5 @@
-#include "unity-plugin.h"
-#include "core.hpp"
+#include "core-wrapper.h"
+#include "core/core.hpp"
 #include <iostream>
 
 void printHello()
