@@ -14,14 +14,6 @@ project "core"
 		default_defines,
 	}
 
-	if isWinBuild() then
-		--pchheader "stdafx.h"
-		--pchsource "stdafx.cpp"
-	else
-		--pchheader "../src/core/stdafx.h"
-	end
-
-
 	includedirs {
 		core_includedirs,
 		default_includedirs,
@@ -32,6 +24,39 @@ project "core"
 		"../src/core/**.hpp",
 		"../src/core/**.c",
 		"../src/core/**.cpp",
+	}
+
+	buildoptions {
+		cpp11_buildoptions,
+	}
+
+	linkoptions {
+		cpp11_linkoptions,
+	}
+
+project "core-test"
+	kind "ConsoleApp"
+	language "C++"
+	flags {}
+
+	defines {
+		default_defines,
+	}
+
+	includedirs {
+		core_includedirs,
+		default_includedirs,
+	}
+
+	files {
+		"../src/core-test/**.h",
+		"../src/core-test/**.hpp",
+		"../src/core-test/**.c",
+		"../src/core-test/**.cpp",
+	}
+
+	links {
+		"core",
 	}
 
 	buildoptions {
