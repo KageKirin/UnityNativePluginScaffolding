@@ -4,7 +4,9 @@
 -- /!\ global settings. modifying will force a full rebuild!
 
 default_defines = {}
-default_includedirs = {}
+default_includedirs = {
+	"../src",
+}
 
 default_libdirs = {
 	"../.build/bin",

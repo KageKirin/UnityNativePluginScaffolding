@@ -71,7 +71,8 @@ end
 
 -- create projects
 dofile "core.project.lua"
-dofile "unity-plugin.project.lua"
+dofile "core-wrapper.project.lua"
+dofile "core-plugin.project.lua"
 
 --create_project = true
 --build_canaries = true
